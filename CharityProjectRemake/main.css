@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+*{
+	font-family: 'Open Sans', sans-serif;
+}
+
+img {
+	border-radius: 10px;
+}
+
+body {
+	display:grid;
+	grid-template-columns: 1fr 75em 1fr;
+	grid-template-areas: 
+	"header header header"
+	". about-company ."
+	". fundraisers ."
+	". latest-donations ."
+	"success-stories success-stories success-stories"
+	". latest-news ."
+	"form form form"
+	"footer footer footer"
+	;
+
+}
+
+.container {	
+	display:flex;
+	gap:4em;
+	padding:4em;
+}
+
+.container > *  {	
+	flex-basis:100%;
+	flex-grow: 1; 
+	flex-shrink: 1;
+}
+
+.header {	
+	grid-area: header;
+	width:100%;
+	color:white;
+	text-transform: capitalize;
+	background: 
+		linear-gradient(90deg, rgba(2,0,36,1) 0%,
+	 	rgba(0,0,0,0.6643032212885154) 0%),
+		url("img/pics/header-background.webp");
+	background-size:100%;
+	background-repeat: no-repeat;
+	background-position: fixed;
+	height:45em;
+	display:flex;
+	flex-direction:column;
+	gap: 10em;
+}
+
+.header-top {
+	display:flex;
+	gap:20em;
+	justify-content: center;
+	align-items: center;
+	padding:2em;
+	
+	
+}
+
+.header-top h1 {
+	text-transform: uppercase;
+	font-size:2.5rem;
+	font-weight: normal;
+}
+
+
+.header-top nav ul {
+	display: flex;
+
+	gap: 3em;
+	align-content: center;
+}
+
+.current-page  {
+	border-bottom: .18rem solid white;
+	padding-bottom: 1rem;
+}
+
+
+.header-top nav ul li:hover {
+	opacity: 0.7;
+	cursor: pointer;
+}
+
+.header-top nav ul li:hover , .header-top nav ul li {
+	transition: opacity .4s ease;
+}
+
+.header-bottom {
+	display:flex;
+	flex:1;
+	flex-direction: column;	
+	text-align: center;
+	align-items:center;
+
+}
+
+.header-bottom p {
+	font-size:3.5rem;
+}
+
+.header-bottom a {
+	font-size:1rem;
+}
+
+.blurred-block {
+	display:flex;
+	justify-content: center;	
+	color:white;
+	background-size: 100%;
+	background-position: center;
+}
+
+.blurred-block-content {
+	width:75em;
+}
+
+.footer {
+	grid-area: footer;
+	background-image: url("img/pics/footer-background.jpg");
+	color:white;
+	
+}
+
+.footer-block {
+	line-height: 1.8rem;
+}
+
+.footer-block h1 {
+	text-transform: uppercase;
+}
+
+.footer-block p {
+	line-height: 1.5rem;
+	font-size: 1.2rem;
+}
+
+
+
+.f-blog-block {
+	display: flex;
+	margin:1.5rem 0;
+	
+}
+
+
+
+.f-blog-block h1  {
+	margin:0px;
+	font-size: .8rem;
+	text-transform: capitalize;
+	
+}
+
+.f-blog-block h1 a {
+	opacity: 1;
+}
+
+.f-blog-block h1 a:hover {
+	transition: color .5s ease;
+	color:#e8b923;
+	cursor: pointer;
+}
+
+.f-blog-block > * {	
+	flex-grow: 1; 
+	flex-shrink: 1;
+}
+
+.fb-pic {
+	flex-basis:20%;
+}
+
+.fb-pic img {
+	border: 0.3rem solid white;
+}
+
+.fb-links {
+	margin:0 0 0 0.8rem;
+	font-size:0.5rem;
+	
+}
+
+.fb-links a  {
+	align-content: center;
+	opacity: 0.5;
+}
+
+.fb-links a:hover  {
+	cursor: pointer;
+	transition: opacity .5s ease;
+	opacity: 1;
+}
+
+.fb-links a img {
+	width:.8rem;
+	margin:0px .3rem 0 0 ;
+	
+}
+
+.fb-links > * {
+	font-size:.7rem;
+	
+	
+	margin-right:.8rem;
+	
+}
+
+.f-contact a {
+	color: #e8b923;
+}
+
+.f-contact a:hover {
+	cursor:pointer;
+}
+
+.f-contact  img {
+	margin-right:.8rem;
+}
+
+
+.fc-link { 
+	display: flex;
+	align-items: center;
+	margin:0px;
+	text-align: start;
+}
+
+.fc-link a > * {
+	
+	margin:0px;
+	padding:0px;	
+}
+
+.fc-adress {
+	align-items: flex-start;	
+}
+
+.footer {
+	display:flex;
+	justify-content: center;		
+}
+
+.footer-content {
+	width:75em;
+}
