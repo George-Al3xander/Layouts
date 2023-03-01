@@ -1,0 +1,40 @@
+body {	    
+	grid-template-areas: 
+	"header header header"
+	". steps ."
+	". latest-donations ."	
+	"form form form"
+	"footer footer footer"
+	;
+}
+
+.steps {
+    grid-area: steps;    
+}
+
+.steps > * {
+    padding:2rem;
+}
+
+.steps img {
+    border-radius: 0;     
+}
+
+.step-text {
+    flex-basis: 70%; 
+    line-height: 2rem;  
+}
+
+.step-text h3 {
+    text-transform: uppercase;
+    color:grey;
+}
+
+.step-text h1 {
+    font-weight: bold;
+    font-size:2rem;
+}
+
+.step-text p {
+    font-size:1.4rem;
+}

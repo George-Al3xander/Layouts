@@ -1,0 +1,16 @@
+body {
+    grid-template-areas: 
+	"header header header"
+    ". gallery ."			
+	"form form form"
+	"footer footer footer"
+	;
+}
+.header{
+	gap: 14em;
+}
+
+.gallery {
+    grid-area: gallery;
+    height:50rem;
+}

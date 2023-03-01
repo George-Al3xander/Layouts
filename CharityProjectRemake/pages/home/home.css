@@ -1,102 +1,26 @@
-.about-company {
- grid-area:about-company;
-}
 
-.ac-top {
-	border-bottom:1px solid lightgrey;
-}
-
-.ac-left {
-	padding:3rem 1.8rem;
-	background-color: #e8b923;
-}
-
-.ac-left h1  {
-	font-size:3.8rem;
-	font-weight:bold;
-}
-
-.ac-left h2  {
-	font-weight:normal;
-	font-size:1.8rem;
-	
-}
-
-
-.ac-left span{	
-	font-weight:normal;
-	font-size:1.5rem;
-}
-
-.ac-left > * {
-	
-}
-
-.ac-left a, .ac-right a , .success-stories a ,.form input[type=submit] {
-	transition:color ease .3s;
-	transition:background-color ease .3s;
-	text-transform:uppercase;
-	font-size:1rem;
-	color:black;
-	background-color:white;
-	padding:.5rem 1.4rem;
-	letter-spacing:.15rem;
-
-}
-
-.ac-left a:hover, .ac-right a:hover,.success-stories a:hover,.form input[type=submit]:hover {
-	cursor:pointer;
-	color:white;
-	background-color:black;	
-
-}
-
-.ac-right p {
-	font-size:1.1rem;
-}
-.ac-right a {
-	background-color: #e8b923;
-	color:white;
-}
-
-.ac-right h1 {
-	font-size:2.8rem;
-	font-weight:bold;
+body {
+	grid-template-areas: 
+	"header header header"
+	". about-company ."
+	". fundraisers ."
+	". latest-donations ."
+	"success-stories success-stories success-stories"
+	". latest-news ."
+	"form form form"
+	"footer footer footer"
+	;
 }
 
 
 
-.ac-bottom-block {
-	
-	display:flex;
-	flex-direction:row;
-	flex:1;
-	gap:1rem;
-}
-
-.ac-bottom-block h1 {	
-	font-weight:bold;	
-}
 
 .ac-bottom-block a,.latest-donations a,.ln-block a,.f-about-us a   {
-	text-transform: capitalize;
-	color:#e8b923;	
-	border-bottom:1px solid #e8b923;
-	cursor:pointer;
+	
 }
 
 .ac-bottom-block a:hover,.latest-donations a:hover,.ln-block  a:hover,.f-about-us a:hover{		
-	border-bottom:none;	
-}
-
-.ac-bottom-block img {
-	width:8rem;
 	
-}
-
-
-.ac-bottom-block p,.ac-bottom-block a{
-	line-height: 2rem;
 }
 
 .fundraisers {
@@ -105,62 +29,9 @@
 	background-color: lightgrey;
 }
 
-.latest-donations {
-	grid-area: latest-donations;	
-	display:flex;	
-	text-align: center;
-	display: flex;
-	flex-direction: column;
-	padding:2rem;
-}
-
-.ld-top {
-	font-size:1.2rem;
-
-}
-
-.latest-donations h1 {
-	font-weight: bold;
-}
-
-.donator h1{
-	font-size:1.25rem;
-}
-
-.donator {
-	scale: 0.8;
-}
-
-.donator img {
-	margin:0.5rem;
-	
-}
-
-.donator h3 {
-	text-transform: capitalize;
-	color:grey;
-}
-
-.donator h2 {
-	font-size: 1.15rem;
-}
-
-.donator span {	
-	color:green;
-}
-
-.donator h4 {
-	font-weight: bold;
-	font-style: italic;
-}
-.donator h4 a {
-	font-weight: normal;
-
-}
-
 .success-stories {
 	grid-area: success-stories;		
-
+	line-height: 2rem;
 	background: linear-gradient(108deg, 
 	rgba(232,185,35,0.7539390756302521) 100%, 
 	rgba(232,185,35,0.6306897759103641) 100%),
@@ -190,84 +61,5 @@
 	padding:.8rem 2.5rem;
 }
 
-.ln-top h1 {
-	text-transform: capitalize;
-	font-weight: bold;
-	font-size:1.7rem;
-}
 
-.latest-news {
-	padding:4.5em 0;
-	grid-area:latest-news;
-}
 
-.ln-top {
-	padding-left:4em;
-}
-
-.ln-block {	
-	line-height: 1.7rem;	
-}
-
-.ln-block img {
-	transition: scale .4s ease;
-	border-radius: 0px;
-}
-.ln-pic {
-	display: inline-block;
-	overflow: hidden;
-}
-
-.ln-block h1 a {
-	transition: color .5s ease;
-	color:black;
-	border-bottom: 0;
-	font-weight: bold;	
-	text-transform: capitalize;
-	
-}
-
-.ln-block h1 a:hover {
-	color:#e8b923;
-	transition: color .5s ease;
-	cursor:pointer
-}
-
-.ln-block img:hover {
-	transition: scale .4s ease;
-	scale:1.2;
-}
-
-.form {
-	color:white;
-	grid-area:form;
-	background: linear-gradient(108deg, 
-	rgba(232,185,35,0.7539390756302521) 100%, 
-	rgba(232,185,35,0.6306897759103641) 100%),
-	url("../../img/pics/form-background.webp");
-}
-
-.form form {	
-	
-}
-
-::placeholder {
-	font-style: italic;
-	color:white;
-	padding:1rem;
-}
-
-.form fieldset {
-	margin:1rem 0;
-	border:1px solid white;
-	line-height: 2rem;
-}
-
-.form input[type=submit] {
-	padding:.35rem 3rem;
-	background-color: white;
-	color:black;
-	text-transform: uppercase;
-	font-size:1rem;
-	
-}
