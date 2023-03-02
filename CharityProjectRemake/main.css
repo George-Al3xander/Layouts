@@ -54,16 +54,12 @@ body {
 	gap: 10em;
 }
 
-
-
 .header-top {
 	display:flex;
 	gap:20em;
 	justify-content: center;
 	align-items: center;
-	padding:2em;
-	
-	
+	padding:2em;	
 }
 
 .header-top h1 {
@@ -77,10 +73,8 @@ body {
 	letter-spacing: .3rem;
 }
 
-
 .header-top nav ul {
 	display: flex;
-
 	gap: 3em;
 	align-content: center;
 }
@@ -89,7 +83,6 @@ body {
 	border-bottom: .18rem solid white;
 	padding-bottom: 1rem;
 }
-
 
 .header-top nav ul li:hover {
 	opacity: 0.7;
@@ -118,16 +111,16 @@ body {
 }
 
 .about-company {
-grid-area:about-company;
+	grid-area:about-company;
 }
    
 .ac-top {
-border-bottom:1px solid lightgrey;
+	border-bottom:1px solid lightgrey;
 }
    
 .ac-left {
-padding:3rem 1.8rem;
-background-color: #e8b923;
+	padding:3rem 1.8rem;
+	background-color: #e8b923;
 }
    
 .ac-left h1  {
@@ -142,35 +135,35 @@ background-color: #e8b923;
    
    
 .ac-left span{	
-font-weight:normal;
- font-size:1.5rem;
+	font-weight:normal;
+ 	font-size:1.5rem;
 }
    
    
    
-.ac-left a, .ac-right a , .success-stories a ,.form input[type=submit] {
-transition:color ease .3s;
-transition:background-color ease .3s;
-text-transform:uppercase;
-font-size:1rem;
-color:black;
-background-color:white;
-padding:.5rem 1.4rem;
-letter-spacing:.15rem;
+.ac-left a, .ac-right a , .success-stories a ,.form input	[type=submit] {
+	transition:color ease .3s;
+	transition:background-color ease .3s;
+	text-transform:uppercase;
+	font-size:1rem;
+	color:black;
+	background-color:white;
+	padding:.5rem 1.4rem;
+	letter-spacing:.15rem;
 }
    
 .ac-left a:hover, .ac-right a:hover,.success-stories a:hover,.form input[type=submit]:hover {
- cursor:pointer;
-color:white;
- background-color:black;	
+ 	cursor:pointer;
+	color:white;
+ 	background-color:black;	
    
 }
    
 .ac-right p {
-font-size:1.1rem;
+	font-size:1.1rem;
 }
 .ac-right a {
-background-color: #e8b923;
+	background-color: #e8b923;
   color:white;
 }
    
@@ -180,28 +173,22 @@ background-color: #e8b923;
 }
    
 .ac-bottom-block {	   
-	   display:flex;
-	   flex-direction:row;
-	   flex:1;
-	   gap:1rem;
+	display:flex;
+	flex-direction:row;
+	flex:1;
+	gap:1rem;
 }
-
-
    
 .ac-bottom-block h1 {	
 	 font-weight:bold;	
 }
 .ac-bottom-block img {
-	width:8rem;	
-	   
-}
-   
-   
+	width:8rem;		   
+} 
+
 .ac-bottom-block p,.ac-bottom-block a{
 	 line-height: 2rem;
-}
-   
-   
+}      
 
 .blurred-block {
 	display:flex;
@@ -264,7 +251,6 @@ background-color: #e8b923;
 	margin:8rem 0 .5rem 0;
 }
 
-
 .latest-donations h1 {
 	font-weight: bold;
 }
@@ -278,8 +264,7 @@ background-color: #e8b923;
 }
 
 .donator img {
-	margin:0.5rem;
-	
+	margin:0.5rem;	
 }
 
 .donator h3 {
@@ -301,7 +286,6 @@ background-color: #e8b923;
 }
 .donator h4 a {
 	font-weight: normal;
-
 }
 
 .ln-top h1 {
@@ -323,13 +307,19 @@ background-color: #e8b923;
 	line-height: 1.7rem;	
 }
 
-.ln-block img {
-	transition: scale .4s ease;
+.ln-pic {	
+	overflow: hidden;
+	display: flex;
+}
+
+.ln-pic img {
+	transition: scale .5s ease-in-out ;	
 	border-radius: 0px;
 }
-.ln-pic {
-	display: inline-block;
-	overflow: hidden;
+
+.ln-pic img:hover {	
+	transition: scale .5s ease-in-out ;
+	scale:1.3;
 }
 
 .ln-block h1 a {
@@ -347,18 +337,10 @@ background-color: #e8b923;
 	cursor:pointer
 }
 
-.ln-block img:hover {
-	transition: scale .4s ease;
-	scale:1.2;
-}
-
-
-
 .footer {
 	grid-area: footer;
 	background-image: url("img/pics/footer-background.jpg");
-	color:white;
-	
+	color:white;	
 }
 
 .footer-block {
@@ -379,13 +361,10 @@ background-color: #e8b923;
 	margin:1.5rem 0;	
 }
 
-
-
 .f-blog-block h1  {
 	margin:0px;
 	font-size: .8rem;
-	text-transform: capitalize;
-	
+	text-transform: capitalize;	
 }
 
 .f-blog-block h1 a {
@@ -414,7 +393,6 @@ background-color: #e8b923;
 .fb-links {
 	margin:0 0 0 0.8rem;
 	font-size:0.5rem;
-	
 }
 
 .fb-links a  {
@@ -430,16 +408,12 @@ background-color: #e8b923;
 
 .fb-links a img {
 	width:.8rem;
-	margin:0px .3rem 0 0 ;
-	
+	margin:0px .3rem 0 0 ;	
 }
 
 .fb-links > * {
-	font-size:.7rem;
-	
-	
-	margin-right:.8rem;
-	
+	font-size:.7rem;	
+	margin-right:.8rem;	
 }
 
 .f-contact a {
@@ -454,7 +428,6 @@ background-color: #e8b923;
 	margin-right:.8rem;
 }
 
-
 .fc-link { 
 	display: flex;
 	align-items: center;
@@ -462,8 +435,7 @@ background-color: #e8b923;
 	text-align: start;
 }
 
-.fc-link a > * {
-	
+.fc-link a > * {	
 	margin:0px;
 	padding:0px;	
 }
