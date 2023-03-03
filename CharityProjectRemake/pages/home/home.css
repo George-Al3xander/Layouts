@@ -13,16 +13,6 @@ body {
 }
 
 
-
-
-.ac-bottom-block a,.latest-donations a,.ln-block a,.f-about-us a   {
-	
-}
-
-.ac-bottom-block a:hover,.latest-donations a:hover,.ln-block  a:hover,.f-about-us a:hover{		
-	
-}
-
 .fundraisers {
 	grid-area: fundraisers;
 	height: 50em;
@@ -42,8 +32,7 @@ body {
 	box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
-.success-stories a {
-	color:white;
+.success-stories a {	
 	background-color: green;
 	
 }

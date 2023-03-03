@@ -1,5 +1,64 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 
+
+:root {
+	--primary-color: black;
+	--secondary-color: white;
+	--alternative-color: #e8b923;
+
+	--tt-uppercase: uppercase;
+
+	--lh-large: 1.5em;
+
+	--padding-medium: 4em;
+
+	--gap-normal:10em;
+	--gap-large: calc(var(--gap-normal) * 2);
+
+	
+
+}
+
+.text-color-primary {
+	color: var(--primary-color);
+}
+
+.text-color-secondary {
+	color: var(--secondary-color);
+}
+
+.text-color-alternative {
+	color: var(--alternative-color);
+}
+
+.background-color-primary {
+	background-color: var(--primary-color);
+}
+
+.background-color-secondary {
+	background-color: var(--secondary-color);
+}
+
+.background-color-alternative {
+	background-color: var(--alternative-color);
+}
+
+.padding-medium {
+	padding: var(--padding-medium);
+}
+
+.gap-normal {
+	gap:var(--gap-normal)
+}
+
+.gap-large {
+	gap:var(--gap-large)
+}
+
+
+
+
+
 *{
 	font-family: 'Open Sans', sans-serif;
 }
@@ -15,8 +74,8 @@ body {
 
 .yellow-link  {
 	text-transform: capitalize;
-	color:#e8b923;	
-	border-bottom:1px solid #e8b923;
+	color:var(--alternative-color);	
+	border-bottom:1px solid var(--alternative-color);
 	cursor:pointer;
 }
 
@@ -26,8 +85,7 @@ body {
 
 .container {	
 	display:flex;
-	gap:4em;
-	padding:4em;
+	gap:4em;	
 }
 
 .container > *  {	
@@ -38,8 +96,7 @@ body {
 
 .header {	
 	grid-area: header;
-	width:100%;
-	color:white;
+	width:100%;	
 	text-transform: capitalize;
 	background: 
 		linear-gradient(90deg, rgba(2,0,36,1) 0%,
@@ -50,13 +107,11 @@ body {
 	background-position: fixed;
 	height:45em;
 	display:flex;
-	flex-direction:column;
-	gap: 10em;
+	flex-direction:column;	
 }
 
 .header-top {
-	display:flex;
-	gap:20em;
+	display:flex;	
 	justify-content: center;
 	align-items: center;
 	padding:2em;	
@@ -119,8 +174,7 @@ body {
 }
    
 .ac-left {
-	padding:3rem 1.8rem;
-	background-color: #e8b923;
+	padding:3rem 1.8rem;	
 }
    
 .ac-left h1  {
@@ -145,26 +199,23 @@ body {
 	transition:color ease .3s;
 	transition:background-color ease .3s;
 	text-transform:uppercase;
-	font-size:1rem;
-	color:black;
-	background-color:white;
+	font-size:1rem;	
 	padding:.5rem 1.4rem;
 	letter-spacing:.15rem;
 }
    
 .ac-left a:hover, .ac-right a:hover,.success-stories a:hover,.form input[type=submit]:hover {
  	cursor:pointer;
-	color:white;
- 	background-color:black;	
+	color:var(--secondary-color);
+ 	background-color:var(--primary-color);	
    
 }
    
 .ac-right p {
 	font-size:1.1rem;
 }
-.ac-right a {
-	background-color: #e8b923;
-  color:white;
+.ac-right a {	
+  
 }
    
 .ac-right h1 {
@@ -193,7 +244,7 @@ body {
 .blurred-block {
 	display:flex;
 	justify-content: center;	
-	color:white;
+	
 	background-size: 100%;
 	background-position: center;
 }
@@ -203,7 +254,7 @@ body {
 }
 
 .form {
-	color:white;
+	
 	grid-area:form;
 	background: linear-gradient(108deg, 
 	rgba(232,185,35,0.7539390756302521) 100%, 
@@ -213,20 +264,20 @@ body {
 
 ::placeholder {
 	font-style: italic;
-	color:white;
+	color:var(--secondary-color);
 	padding:1rem;
 }
 
 .form fieldset {
 	margin:1rem 0;
-	border:1px solid white;
+	border:1px solid var(--secondary-color);
 	line-height: 2rem;
 }
 
 .form input[type=submit] {
 	padding:.35rem 3rem;
-	background-color: white;
-	color:black;
+	background-color: var(--secondary-color);
+	
 	text-transform: uppercase;
 	font-size:1rem;
 	
@@ -235,10 +286,9 @@ body {
 .latest-donations {
 	grid-area: latest-donations;	
 	display:flex;	
-	text-align: center;
-	display: flex;
+	text-align: center;	
 	flex-direction: column;
-	padding:2rem;
+	
 }
 
 .ld-top {
@@ -269,7 +319,7 @@ body {
 
 .donator h3 {
 	text-transform: capitalize;
-	color:grey;
+	opacity: 0.8;
 }
 
 .donator h2 {
@@ -324,7 +374,7 @@ body {
 
 .ln-block h1 a {
 	transition: color .5s ease;
-	color:black;
+	
 	border-bottom: 0;
 	font-weight: bold;	
 	text-transform: capitalize;
@@ -332,7 +382,7 @@ body {
 }
 
 .ln-block h1 a:hover {
-	color:#e8b923;
+	color:var(--alternative-color);
 	transition: color .5s ease;
 	cursor:pointer
 }
@@ -340,7 +390,7 @@ body {
 .footer {
 	grid-area: footer;
 	background-image: url("img/pics/footer-background.jpg");
-	color:white;	
+		
 }
 
 .footer-block {
@@ -373,7 +423,7 @@ body {
 
 .f-blog-block h1 a:hover {
 	transition: color .5s ease;
-	color:#e8b923;
+	color:var(--primary-color);
 	cursor: pointer;
 }
 
@@ -387,11 +437,11 @@ body {
 }
 
 .fb-pic img {
-	border: 0.3rem solid white;
+	border: 0.3rem solid var(--secondary-color);
 }
 
 .fb-links {
-	margin:0 0 0 0.8rem;
+	margin:0 0 0 .8rem;
 	font-size:0.5rem;
 }
 
@@ -416,9 +466,7 @@ body {
 	margin-right:.8rem;	
 }
 
-.f-contact a {
-	color: #e8b923;
-}
+
 
 .f-contact a:hover {
 	cursor:pointer;
@@ -430,14 +478,8 @@ body {
 
 .fc-link { 
 	display: flex;
-	align-items: center;
-	margin:0px;
+	align-items: center;	
 	text-align: start;
-}
-
-.fc-link a > * {	
-	margin:0px;
-	padding:0px;	
 }
 
 .fc-adress {
@@ -451,4 +493,9 @@ body {
 
 .footer-content {
 	width:75em;
+}
+
+
+svg {
+	fill:var(--alternative-color);
 }
