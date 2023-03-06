@@ -14,7 +14,7 @@ body {
 		linear-gradient(90deg, rgba(2,0,36,1) 0%,
 	 	rgba(0,0,0,0.6643032212885154) 0%),
 		url("../../img/pics/form-background.webp");
-        gap: 14em;
+        
 }
 
 .history {

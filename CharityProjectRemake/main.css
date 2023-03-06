@@ -1,7 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Golos+Text&display=swap');
 
 :root {
+
+	--ff-main: 'Golos Text', sans-serif;
+
 	--primary-color: black;
 	--secondary-color: white;
 	--alternative-color: #e8b923;
@@ -13,8 +16,11 @@
 	--padding-medium: 4em;
 
 	--gap-normal:10em;
+	--gap-medium:calc(var(--gap-normal) * 1.4);
 	--gap-large: calc(var(--gap-normal) * 2);
 
+	--opacity-medium:.5;
+	--opacity-strong: .8;
 	
 
 }
@@ -48,11 +54,24 @@
 }
 
 .gap-normal {
-	gap:var(--gap-normal)
+	gap: var(--gap-normal)
 }
 
+.gap-medium {
+	gap: var(--gap-medium)
+}
+
+
 .gap-large {
-	gap:var(--gap-large)
+	gap: var(--gap-large)
+}
+
+.opacity-medium {
+	opacity: var(--opacity-medium);
+}
+
+.opacity-strong {
+	opacity: var(--opacity-strong);
 }
 
 
@@ -60,7 +79,7 @@
 
 
 *{
-	font-family: 'Open Sans', sans-serif;
+	font-family:var(--ff-main);
 }
 
 img {
@@ -318,8 +337,7 @@ body {
 }
 
 .donator h3 {
-	text-transform: capitalize;
-	opacity: 0.8;
+	text-transform: capitalize;	
 }
 
 .donator h2 {
@@ -423,7 +441,7 @@ body {
 
 .f-blog-block h1 a:hover {
 	transition: color .5s ease;
-	color:var(--primary-color);
+	color:var(--alternative-color);
 	cursor: pointer;
 }
 
@@ -433,21 +451,46 @@ body {
 }
 
 .fb-pic {
-	flex-basis:20%;
+	flex-basis:35%;	
 }
 
 .fb-pic img {
+	border-radius: 5px;
 	border: 0.3rem solid var(--secondary-color);
 }
 
 .fb-links {
 	margin:0 0 0 .8rem;
-	font-size:0.5rem;
+	font-size:0.7em;
+	
+	
 }
 
-.fb-links a  {
-	align-content: center;
-	opacity: 0.5;
+.fb-links h1 {
+	white-space: wrap;
+	font-size: 1.3em;
+}
+
+.fb-links-icons {
+	white-space: nowrap;
+}
+.fb-links-icons > * {
+	margin-right:.5rem;
+}
+
+.fb-links >*  {
+ 	align-content: center;	
+	
+	
+}
+
+.fb-links svg {
+	fill: var(--secondary-color);
+	scale: .7;
+	margin:0;	
+	margin-bottom:-.4em;
+	
+
 }
 
 .fb-links a:hover  {
@@ -456,13 +499,7 @@ body {
 	opacity: 1;
 }
 
-.fb-links a img {
-	width:.8rem;
-	margin:0px .3rem 0 0 ;	
-}
-
-.fb-links > * {
-	font-size:.7rem;	
+.fb-links > * {	
 	margin-right:.8rem;	
 }
 
@@ -498,4 +535,9 @@ body {
 
 svg {
 	fill:var(--alternative-color);
+	margin-right: 1em;
+	scale:1.1;	
+	
 }
+
+
