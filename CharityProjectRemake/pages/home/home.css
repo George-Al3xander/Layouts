@@ -1,17 +1,4 @@
 
-body {
-	grid-template-areas: 
-	"header header header"
-	". about-company ."
-	". fundraisers ."
-	". latest-donations ."
-	"success-stories success-stories success-stories"
-	". latest-news ."
-	"form form form"
-	"footer footer footer"
-	;
-}
-
 
 .fundraisers {
 	grid-area: fundraisers;
@@ -37,9 +24,7 @@ body {
 	
 }
 
-.stories-right h1 {	
-	font-size:1.8rem;
-}
+
 
 .stories-right span,.stories-right h1 {
 	font-weight: bold;

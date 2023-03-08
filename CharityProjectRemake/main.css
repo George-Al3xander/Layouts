@@ -4,6 +4,13 @@
 :root {
 
 	--ff-main: 'Golos Text', sans-serif;
+	
+	--fs-average: 1rem;
+	--fs-small: calc(var(--fs-average)* 0.813 );
+	--fs-medium: calc(var(--fs-average) * 1.25);
+	--fs-big: calc(var(--ff-average) * 2);
+	--fs-large: calc(var(--fs-average) * 3.5);
+	--fs-biggest: calc(var(--fs-average) * 4.375);
 
 	--primary-color: black;
 	--secondary-color: white;
@@ -15,14 +22,13 @@
 
 	--padding-medium: 4em;
 
-	--gap-normal:10em;
-	--gap-medium:calc(var(--gap-normal) * 1.4);
+	--gap-normal: 10rem;
+	--gap-small: calc(var(--gap-normal) / 2);
+	--gap-medium: calc(var(--gap-normal) * 1.4);
 	--gap-large: calc(var(--gap-normal) * 2);
 
 	--opacity-medium:.5;
-	--opacity-strong: .8;
-	
-
+	--opacity-strong: .8;	
 }
 
 .text-color-primary {
@@ -35,6 +41,30 @@
 
 .text-color-alternative {
 	color: var(--alternative-color);
+}
+
+.font-size-small {
+	font-size: var(--ff-small);
+}
+
+.font-size-average {
+	font-size: var(--ff-average);
+}
+
+.font-size-medium {
+	font-size: var(--ff-medium);
+}
+
+.font-size-big {
+	font-size: var(--ff-big);
+}
+
+.font-size-large {
+	font-size: var(--ff-large);
+}
+
+.font-size-biggest {
+	font-size: var(--ff-biggest);
 }
 
 .background-color-primary {
@@ -53,17 +83,20 @@
 	padding: var(--padding-medium);
 }
 
-.gap-normal {
-	gap: var(--gap-normal)
+.gap-small {	
+	gap: var(--gap-small);
 }
 
-.gap-medium {
-	gap: var(--gap-medium)
+.gap-normal {	
+	gap: var(--gap-normal);
 }
 
+.gap-medium {	
+	gap: var(--gap-medium);
+}
 
-.gap-large {
-	gap: var(--gap-large)
+.gap-large {	
+	gap: var(--gap-large);
 }
 
 .opacity-medium {
@@ -74,6 +107,10 @@
 	opacity: var(--opacity-strong);
 }
 
+.text-center {
+	text-align: center;
+}
+
 
 
 
@@ -82,14 +119,24 @@
 	font-family:var(--ff-main);
 }
 
+body,
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
 img {
 	border-radius: 10px;
 }
 
-body {
-	display:grid;
-	grid-template-columns: 1fr 75em 1fr;
+header,
+section {
+  padding: 4rem 0;
 }
+
+
 
 .yellow-link  {
 	text-transform: capitalize;
@@ -102,49 +149,67 @@ body {
 	border-bottom:none;	
 }
 
-.container {	
-	display:flex;
-	gap:4em;	
+.split {
+	display: flex;
+	flex-direction: column;	
 }
 
-.container > *  {	
+.container {		
+	margin-inline: auto;
+	width: min(90%,70rem);		
+}
+
+.container-narrow {	
+	max-width: 42rem;
+}
+
+
+section {
+	display: flex;
+	flex-direction: row;
+}
+
+
+
+
+.block > *  {	
 	flex-basis:100%;
 	flex-grow: 1; 
 	flex-shrink: 1;
 }
 
-.header {	
-	grid-area: header;
-	width:100%;	
+header {	
+	
 	text-transform: capitalize;
 	background: 
 		linear-gradient(90deg, rgba(2,0,36,1) 0%,
 	 	rgba(0,0,0,0.6643032212885154) 0%),
 		url("img/pics/header-background.webp");
-	background-size:100%;
+	background-size: cover;
 	background-repeat: no-repeat;
-	background-position: fixed;
-	height:45em;
-	display:flex;
-	flex-direction:column;	
+	background-position: fixed;			
+	
 }
 
 .header-top {
 	display:flex;	
 	justify-content: center;
-	align-items: center;
-	padding:2em;	
+	align-items: center;		
+	
 }
 
 .header-top h1 {
-	text-transform: uppercase;
-	font-size:2.5rem;
+	text-transform: uppercase;	
 	font-weight: normal;
 }
 
 .header-bottom p {
 	font-weight: bold;
 	letter-spacing: .3rem;
+}
+
+.header-top nav {
+	display: none;
 }
 
 .header-top nav ul {
@@ -176,40 +241,25 @@ body {
 
 }
 
-.header-bottom p {
-	font-size:3.5rem;
-}
 
-.header-bottom a {
-	font-size:1rem;
-}
 
-.about-company {
-	grid-area:about-company;
-}
    
 .ac-top {
 	border-bottom:1px solid lightgrey;
+	
+}
+.ac-top p {
+	line-height: 2em;
 }
    
 .ac-left {
-	padding:3rem 1.8rem;	
+	padding:3rem 4rem;				
+	
 }
-   
-.ac-left h1  {
-	font-size:3.8rem;
-	font-weight:bold;
-}
-   
-.ac-left h2  {
-	font-weight:normal;
-	font-size:1.8rem;
-}
-   
+  
    
 .ac-left span{	
-	font-weight:normal;
- 	font-size:1.5rem;
+	font-weight:bold;	 	
 }
    
    
@@ -217,10 +267,10 @@ body {
 .ac-left a, .ac-right a , .success-stories a ,.form input	[type=submit] {
 	transition:color ease .3s;
 	transition:background-color ease .3s;
-	text-transform:uppercase;
-	font-size:1rem;	
+	text-transform:uppercase;	
 	padding:.5rem 1.4rem;
 	letter-spacing:.15rem;
+	white-space: nowrap;
 }
    
 .ac-left a:hover, .ac-right a:hover,.success-stories a:hover,.form input[type=submit]:hover {
@@ -230,35 +280,18 @@ body {
    
 }
    
-.ac-right p {
-	font-size:1.1rem;
-}
-.ac-right a {	
-  
-}
+
    
-.ac-right h1 {
- 	font-size:2.8rem;
+.ac-right h1 { 	
 	font-weight:bold;
 }
    
 .ac-bottom-block {	   
-	display:flex;
-	flex-direction:row;
+	display:flex;	
 	flex:1;
 	gap:1rem;
-}
-   
-.ac-bottom-block h1 {	
-	 font-weight:bold;	
-}
-.ac-bottom-block img {
-	width:8rem;		   
-} 
-
-.ac-bottom-block p,.ac-bottom-block a{
-	 line-height: 2rem;
-}      
+	margin-bottom:3em;
+}    
 
 .blurred-block {
 	display:flex;
@@ -268,12 +301,9 @@ body {
 	background-position: center;
 }
 
-.blurred-block-content {
-	width:75em;
-}
 
-.form {
-	
+
+.form {	
 	grid-area:form;
 	background: linear-gradient(108deg, 
 	rgba(232,185,35,0.7539390756302521) 100%, 
@@ -302,47 +332,29 @@ body {
 	
 }
 
-.latest-donations {
-	grid-area: latest-donations;	
-	display:flex;	
-	text-align: center;	
-	flex-direction: column;
-	
-}
-
-.ld-top {
-	font-size:1.2rem;	
+.ld-top {		
 	line-height: 3rem;
+}
 
-}
-.ld-top h1 {
-	font-size:2rem;
-	margin:8rem 0 .5rem 0;
-}
+
 
 .latest-donations h1 {
 	font-weight: bold;
 }
 
-.donator h1{
-	font-size:1.25rem;
-}
 
-.donator {
-	scale: 0.8;
-}
+
 
 .donator img {
 	margin:0.5rem;	
 }
 
+
+
 .donator h3 {
 	text-transform: capitalize;	
 }
 
-.donator h2 {
-	font-size: 1.15rem;
-}
 
 .donator span {	
 	color:green;
@@ -358,8 +370,7 @@ body {
 
 .ln-top h1 {
 	text-transform: capitalize;
-	font-weight: bold;
-	font-size:1.7rem;
+	font-weight: bold;	
 }
 
 .latest-news {
@@ -420,8 +431,7 @@ body {
 }
 
 .footer-block p {
-	line-height: 1.5rem;
-	font-size: 1.2rem;
+	line-height: 1.5rem;	
 }
 
 .f-blog-block {
@@ -460,15 +470,11 @@ body {
 }
 
 .fb-links {
-	margin:0 0 0 .8rem;
-	font-size:0.7em;
-	
-	
+	margin:0 0 0 .8rem;	
 }
 
 .fb-links h1 {
-	white-space: wrap;
-	font-size: 1.3em;
+	white-space: wrap;	
 }
 
 .fb-links-icons {
@@ -528,9 +534,7 @@ body {
 	justify-content: center;		
 }
 
-.footer-content {
-	width:75em;
-}
+
 
 
 svg {
@@ -541,3 +545,21 @@ svg {
 }
 
 
+@media (min-width: 40rem) {	
+	.split {	
+		flex-direction:row;	
+	}	
+
+
+	.split > * {
+		flex-basis: 100%;
+	}
+
+	.split > * + * {
+		margin-left: 2em;
+	}
+
+	.header-top nav {
+		display: flex;
+	}
+}
