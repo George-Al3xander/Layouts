@@ -1,18 +1,49 @@
+:root {
 
+	--ff-main: 'Golos Text', sans-serif;
+	
+	--fs-average: 1rem;
+	--fs-small: calc(var(--fs-average)* 0.813 );
+	--fs-medium: calc(var(--fs-average) * 1.25);
+	--fs-big: calc(var(--fs-average) * 2);
+	--fs-large: calc(var(--fs-average) * 3.5);
+	--fs-biggest: calc(var(--fs-average) * 4.375);
+
+	--primary-color: black;
+	--secondary-color: white;
+	--alternative-color: #e8b923;
+
+	--tt-uppercase: uppercase;
+
+	--lh-medium: 1.5em;
+	--lh-large: 2em;
+
+	--padding-medium: 4em;
+
+	--gap-normal: 10rem;
+	--gap-small: calc(var(--gap-normal) / 2);
+	--gap-medium: calc(var(--gap-normal) * 1.4);
+	--gap-large: calc(var(--gap-normal) * 2);
+
+	--opacity-medium:.5;
+	--opacity-strong: .8;	
+}
 
 .fundraisers {
-	grid-area: fundraisers;
 	height: 50em;
 	background-color: lightgrey;
 }
 
-.success-stories {
-	grid-area: success-stories;		
-	line-height: 2rem;
+.success-stories {			
 	background: linear-gradient(108deg, 
 	rgba(232,185,35,0.7539390756302521) 100%, 
 	rgba(232,185,35,0.6306897759103641) 100%),
 	url("../../img/pics/stories-background.webp");
+}
+
+
+.success-stories h1 {
+	font-size:var(--fs-big);
 }
 
 .success-stories img,.form img,.form input[type=submit] {
@@ -20,8 +51,8 @@
 }
 
 .success-stories a {	
-	background-color: green;
-	
+	font-size: var(--fs-small);
+	background-color: green;		
 }
 
 
@@ -35,5 +66,13 @@
 	padding:.8rem 2.5rem;
 }
 
+
+.stories-right p {
+	line-height: var(--lh-large);
+}
+
+.stories-right p {
+	margin-bottom: 1rem;
+}
 
 
