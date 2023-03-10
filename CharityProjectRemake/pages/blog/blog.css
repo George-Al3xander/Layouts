@@ -1,7 +1,0 @@
-body {
-    grid-template-areas: 
-	"header header header"
-    ". latest-news ."
-	"footer footer footer"
-	;
-}

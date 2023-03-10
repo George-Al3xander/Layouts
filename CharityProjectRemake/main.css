@@ -134,6 +134,7 @@ section {
 
 html,
 body{
+	margin:0 auto;
 overflow-x:hidden;
 }
 
@@ -162,7 +163,7 @@ overflow-x:hidden;
 
 .container {		
 	margin-inline: auto;
-	width: min(90%,70rem);		
+	width: min(80%, 70rem);		
 }
 
 
@@ -192,7 +193,62 @@ section {
 }
 
 
-header {
+
+.mobile-menu {
+	width: 100%;	
+	color: var(--secondary-color);
+	background-color: var(--primary-color);
+	padding:0;	
+}
+
+.mobile-menu-nav  {		
+	max-height: 0;
+	transition: all .5s ease-in-out;
+	text-transform: capitalize;
+}
+
+.mobile-menu-nav ul li {
+	visibility: hidden;
+	margin: 1.5rem 0;
+}
+
+
+.mobile-menu-nav ul li:hover {
+	cursor: pointer;
+}
+
+
+
+.mobile-menu-top {		
+	display: flex;
+	justify-content: space-between;
+	align-items: center;		
+	width: 100%;
+	height: 6.25rem;			
+}
+
+.mobile-menu-top svg {
+	margin: 0;
+	fill:var(--secondary-color);		
+}
+
+.menu-icon {
+	display: flex;
+	align-items: center;	
+}
+
+.menu-icon:hover {
+	cursor:pointer;
+	opacity: 0.5;
+	transition: opacity .3s ease-in-out;
+}
+
+.menu-icon h2 {
+	font-size:var(--fs-average)
+}
+
+header {		
+	min-height: 40rem;
 	padding:2rem 0;		
 	text-transform: capitalize;
 	background: 
@@ -201,38 +257,42 @@ header {
 		url("img/pics/header-background.webp");
 	background-size: cover;
 	background-repeat: no-repeat;
-	background-position: fixed;		
-	
-	
+	background-position: fixed;	
 }
 
-.header-top {
+
+.header-top {	
 	display:flex;	
 	justify-content: space-between;
 	align-items: center;	
 	margin-bottom: 20vh;	
-	
+}
+
+.header-top h1,.mobile-menu h1 {
+	font-size: var(--fs-big);	
+	text-transform: uppercase;	
+	font-weight: normal;	
 }
 
 .header-top h1 {
-	text-transform: uppercase;	
-	font-weight: normal;	
+	visibility: hidden;
 }
 
 .header-bottom {
 	margin-bottom: 10vh;
 }
 
-
-
 .header-bottom p {
 	font-weight: bold;
 	letter-spacing: .3rem;
 }
 
-.header-top nav {
-	display: none;
+header nav,.mobile-menu-nav {		
 	font-size:var(--fs-small);
+}
+
+header nav, .header-top h1 {
+	visibility: hidden;
 }
 
 .header-top nav ul {
@@ -554,23 +614,23 @@ footer {
 svg {
 	fill:var(--alternative-color);
 	margin-right: 1em;
-	scale:1.1;	
-	
+	scale:1.1;		
 }
-
 
 @media (min-width: 50rem) {	
 	.split {	
 		flex-direction:row;	
 	}	
-
-
 	.split > * {
 		flex-basis: 100%;
 	}
 
 	.split > * + * ,.success-stories .split > *,.form .split > *{
 		margin-left: 2em;
+	}
+
+	.mobile-menu {
+		display: none;
 	}
 
 	.header-top nav {
@@ -582,5 +642,7 @@ svg {
 		scale:0.8;
 	}
 
-	
+	.header-top nav, .header-top h1 {
+		visibility: visible;
+	}	
 }

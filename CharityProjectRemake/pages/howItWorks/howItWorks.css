@@ -1,39 +1,58 @@
-body {	    
-	grid-template-areas: 
-	"header header header"
-	". steps ."
-	". latest-donations ."	
-	"form form form"
-	"footer footer footer"
-	;
+:root {
+
+	--ff-main: 'Golos Text', sans-serif;
+	
+	--fs-average: 1rem;
+	--fs-small: calc(var(--fs-average)* 0.813 );
+	--fs-medium: calc(var(--fs-average) * 1.25);
+	--fs-big: calc(var(--fs-average) * 2);
+	--fs-large: calc(var(--fs-average) * 3.5);
+	--fs-biggest: calc(var(--fs-average) * 4.375);
+
+	--primary-color: black;
+	--secondary-color: white;
+	--alternative-color: #e8b923;
+
+	--tt-uppercase: uppercase;
+
+	--lh-medium: 1.5em;
+	--lh-large: 2em;
+
+	--padding-medium: 4em;
+
+	--gap-normal: 10rem;
+	--gap-small: calc(var(--gap-normal) / 2);
+	--gap-medium: calc(var(--gap-normal) * 1.4);
+	--gap-large: calc(var(--gap-normal) * 2);
+
+	--opacity-medium:.5;
+	--opacity-strong: .8;	
 }
 
 .steps {
-    grid-area: steps;    
+    line-height: var(--lh-large);
 }
 
-.steps > * {
-    padding:2rem;
+.steps h3 {
+    font-size:var(--fs-average);
+    text-transform: uppercase;
+}
+
+.steps h1 {
+    font-size:var(--fs-big);
+}
+
+.steps p {
+    font-size:var(--fs-medium);
 }
 
 .steps img {
-    border-radius: 0;     
+    border-radius: 0;
 }
 
-.step-text {
+
+.split .step-text  {
     flex-basis: 70%; 
-    line-height: 2rem;  
+
 }
 
-.step-text h3 {
-    text-transform: uppercase;   
-}
-
-.step-text h1 {
-    font-weight: bold;
-    font-size:2rem;
-}
-
-.step-text p {
-    font-size:1.4rem;
-}

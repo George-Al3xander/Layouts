@@ -1,24 +1,10 @@
-body {
-    grid-template-areas: 
-	"header header header"
-    ". contact ."
-	"footer footer footer"
-	;
-}
 
-.header {
+header {
     background: 
 		linear-gradient(90deg, rgba(2,0,36,1) 0%,
 	 	rgba(0,0,0,0.6643032212885154) 0%),
-		url("../../img/pics/form-background.webp");
-        gap: 14em;
+		url("../../img/pics/form-background.webp");        
 }
-
-.contact {
-    grid-area: contact;
-   
-}
-
 
 ::placeholder {	
     font-style: normal;
@@ -48,4 +34,9 @@ form input[type=submit]:hover {
     background-color: var(--primary-color);
 	transition:background-color .3s ease;
 	cursor:pointer;
+ }
+
+ .map {
+	display: flex;
+	justify-content: center;
  }
