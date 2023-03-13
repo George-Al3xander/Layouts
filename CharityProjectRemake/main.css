@@ -319,7 +319,34 @@ header nav, .header-top h1 {
 	flex-direction: column;	
 	text-align: center;
 	align-items:center;
+}
 
+.play-button {
+	color: var(--alternative-color);
+	display: flex;
+	align-items: center;
+	font-size: var(--fs-average);
+
+	transition: all .5s ease;
+
+	
+	
+}
+
+.play-button:hover {
+	cursor: pointer;
+	color: var(--secondary-color);		
+}
+
+
+.play-button > * {
+	margin:0 .5rem;
+}
+
+.play-button svg {
+	transition: all .5s ease;
+
+	fill: var(--alternative-color);	
 }
    
 .ac-top {

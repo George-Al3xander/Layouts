@@ -1,6 +1,9 @@
 const menu = document.querySelector(".mobile-menu-nav");
 const menuLi = document.querySelectorAll(".mm-li");
 const button = document.querySelector(".menu-icon");
+const playSvg = document.getElementById("play-svg");
+const playButton = document.querySelector(".play-button");
+
 let isMenuShown = false;
 
 button.addEventListener("click",()=>{
@@ -32,6 +35,20 @@ let interval = 4000;
       clearInterval(counter);
     }
   }, duration);
+
+playButton.addEventListener("mouseover",()=>{
+    playSvg.style.fill = "white";
+    playSvg.style.scale = "1.5";
+})
+
+
+playButton.addEventListener("mouseout",()=>{
+    playSvg.style.fill = "gold";
+    playSvg.style.scale = "1"; 
+   
+})
+
+
 
 
 
