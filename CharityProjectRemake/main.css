@@ -186,13 +186,10 @@ overflow-x:hidden;
 	opacity:var(--opacity-medium);
 }
 
-
 section {
 	display: flex;
 	flex-direction: row;
 }
-
-
 
 .mobile-menu {
 	width: 100%;	
